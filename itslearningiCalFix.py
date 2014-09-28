@@ -8,6 +8,7 @@ import tornado.options
 from urllib.request import HTTPError, URLError
 
 from tornado.escape import json_encode
+from tornado import httpserver
 
 from icalendar import Calendar
 
@@ -73,7 +74,8 @@ application = tornado.web.Application([
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()
-    application.xheaders = True
-    application.listen(8888)
+    http_server = httpserver.HTTPServer(application, xheaders=True)
+    http_server.listen(8888)
+    print('Listening on port %s' % 8888)
     tornado.ioloop.IOLoop.instance().start()
 
