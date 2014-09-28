@@ -12,10 +12,12 @@ a new and way better one!
 Usage
 ======================
 Start server:
+
      python itslearningiCalFix.py
 
 API for Fixing calendar:
-     http://host:8888/icalendar.ical?url=yoururl
+
+     http://host:8888/calendar.ical?url=yoururl
 
 Replace "yoururl" with the url to the ical calendar.
 
