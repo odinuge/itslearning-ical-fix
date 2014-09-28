@@ -51,7 +51,6 @@ class MainHandler(tornado.web.RequestHandler):
             summary = item['SUMMARY']
             item['SUMMARY'] = item['DESCRIPTION']
             item['DESCRIPTION'] = item['DESCRIPTION'] + "\n" + summary
-            cal_new.add_component(item)
 
         # Return the "New" iCalendar file
         self.set_header("Content-Type", 'text/calendar; charset="utf-8"')
