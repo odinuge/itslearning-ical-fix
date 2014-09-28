@@ -73,6 +73,7 @@ application = tornado.web.Application([
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()
+    application.xheaders = True
     application.listen(8888)
     tornado.ioloop.IOLoop.instance().start()
 
