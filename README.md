@@ -1,4 +1,4 @@
-UgeSyspanel
+itslearningiCalFix
 ======================
 Fixing itslearning iCalendars, one event at a time.
 The itslearning iCalendars are made with a event SUMMARY
