@@ -16,7 +16,7 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         """The http GET function"""
         if self.request.uri == "/":
-            self.redirect("/calendar.ical")
+            self.redirect("calendar.ical")
             return
         
         calendarURL = self.get_argument("url", None, True)
